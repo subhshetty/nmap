@@ -27,4 +27,4 @@ import nmap
             		print str(v)
             		try:    print str(v['addresses']['ipv4']) + ' => ' + str(v['addresses']['fqdn'])
             		except: print str(v['addresses']['ipv4'])
-get_fqdn(ip='8.8.8.8')
+get_fqdn(ip=<target>)
