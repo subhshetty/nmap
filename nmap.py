@@ -11,7 +11,7 @@ def get_mac(ip):
 	for k,v in a['scan'].iteritems():
     		if str(v['status']['state']) == 'up':
         		print str(v)
-        		try:    print str(v['addresses']['ipv4']) + ' => ' + str(v['addresses']['fqdn'])
+        		try:    print str(v['addresses']['ipv4']) + ' => ' + str(v['addresses']['mac'])
         		except: print str(v['addresses']['ipv4'])
 get_mac(ip=<target>)
 	
