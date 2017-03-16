@@ -14,9 +14,8 @@ def get_mac(ip):
 get_mac(ip=<target>)
 	
 
-import nmap
 
-	def get_fqdn(ip):
+def get_fqdn(ip):
     	nm = nmap.PortScanner()
     	host = (ip)
 
@@ -25,6 +24,6 @@ import nmap
     	for k,v in a['scan'].iteritems():
         	if str(v['status']['state']) == 'up':
             		print str(v)
-            		try:    print str(v['addresses']['ipv4']) + ' => ' + str(v['addresses']['fqdn'])
+            		try:    print str(v['addresses']['ipv4']) + ' => ' + str(v['hostnames'][0]['name'])
             		except: print str(v['addresses']['ipv4'])
 get_fqdn(ip=<target>)
